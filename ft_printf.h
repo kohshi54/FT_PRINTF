@@ -5,7 +5,9 @@
 #include <unistd.h>
 
 // todo: check if the return value of the write() is size_t or ssize_t...!!!
-size_t	ft_putchar_fd(char c, int fd);
-size_t	ft_putstr_fd(char *s, int fd);
+size_t	ft_putchar(char c);
+size_t	ft_putstr(char *s);
 int ft_printf(const char *str, ...);
+size_t ft_putnbr(int nbr);
+size_t	ft_convert_base(unsigned long num, unsigned long base);
 #endif
