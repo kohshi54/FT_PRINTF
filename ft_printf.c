@@ -47,14 +47,11 @@ int	ft_printf(const char *format, ...)
 	while (*format)
 	{
 		if (*format == '%')
-		{
 			len += format_checker(&ap, &format);
-		}
 		else
-		{
 			len += ft_putchar(*format);
-		}
-		format++;
+		if (*format)
+			format++;
 	}
 	va_end(ap);
 	return (len);
