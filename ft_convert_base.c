@@ -4,7 +4,7 @@ size_t ft_convert_base(unsigned long long num, unsigned long long base, char for
 {
 	size_t	len;
 
-	len = 0; // doing this in recursion, len is always set to 0?? CHECK THIS LATER. Write this outside??
+	len = 0;
 	if (num >= base)
 	{
 		len += ft_convert_base(num / base, base, format);
@@ -26,5 +26,3 @@ size_t ft_convert_base(unsigned long long num, unsigned long long base, char for
 	}
 	return (len);
 }
-
-// check the place of the len and remove if not necessary

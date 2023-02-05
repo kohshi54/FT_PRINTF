@@ -25,7 +25,7 @@ size_t	format_checker(va_list *ap, const char **format)
 		return (ft_convert_base(va_arg(*ap, unsigned int), 16, **format));
 	if (**format == '%')
 		return (ft_putchar('%'));
-	return (-1); // what is return here?
+	return (0); // what is return here?
 }
 
 int ft_printf(const char *format, ...)
