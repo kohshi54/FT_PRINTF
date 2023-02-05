@@ -34,6 +34,7 @@ size_t	format_checker(va_list *ap, const char **format)
 		return (ft_convert_base(va_arg(*ap, unsigned int), 16, **format));
 	if (**format == '%')
 		return (ft_putchar('%'));
+	(*format)--;
 	return (0);
 }
 
@@ -50,8 +51,7 @@ int	ft_printf(const char *format, ...)
 			len += format_checker(&ap, &format);
 		else
 			len += ft_putchar(*format);
-		if (*format)
-			format++;
+		format++;
 	}
 	va_end(ap);
 	return (len);
