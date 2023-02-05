@@ -16,9 +16,9 @@
 # include <unistd.h>
 # include <limits.h>
 
-size_t	ft_putchar(char c);
-size_t	ft_putstr(char *s);
+size_t	ft_putchar(const char c);
+size_t	ft_putstr(const char *s);
 int		ft_printf(const char *str, ...);
 size_t	ft_putnbr(int nbr);
-size_t	ft_convert_base(unsigned long long num, size_t base, char format);
+size_t	ft_convert_base(unsigned long long num, const size_t base, const char format);
 #endif

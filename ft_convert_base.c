@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-size_t	ft_convert_base(unsigned long long num, size_t base, char format)
+size_t	ft_convert_base(unsigned long long num, const size_t base, const char format)
 {
 	size_t	len;
 
