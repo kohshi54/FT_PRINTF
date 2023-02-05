@@ -1,7 +1,7 @@
 NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-SRCS = ft_printf.c ft_putchar.c ft_putstr.c ft_convert_base.c ft_putnbr.c
+SRCS = ft_printf.c ft_convert_base.c ft_printf_utils.c
 OBJS = $(SRCS:%.c=%.o)
 INCLUDES = ft_printf.h
 
