@@ -21,16 +21,12 @@ size_t	format_checker(va_list *ap, const char **format)
 		return (ft_putstr(va_arg(*ap, char *)));
 	if (**format == 'p')
 		return (ft_putstr("0x") \
-			+ ft_convert_base(va_arg(*ap, unsigned long long), 16, **format));
-	if (**format == 'd')
-		return (ft_putnbr(va_arg(*ap, unsigned long long)));
-	if (**format == 'i')
+			+ ft_convert_base(va_arg(*ap, uintptr_t), 16, **format));
+	if (**format == 'd' || **format == 'i')
 		return (ft_putnbr(va_arg(*ap, int)));
 	if (**format == 'u')
 		return (ft_convert_base(va_arg(*ap, unsigned int), 10, **format));
-	if (**format == 'x')
-		return (ft_convert_base(va_arg(*ap, unsigned int), 16, **format));
-	if (**format == 'X')
+	if (**format == 'x' || **format == 'X')
 		return (ft_convert_base(va_arg(*ap, unsigned int), 16, **format));
 	if (**format == '%')
 		return (ft_putchar('%'));
