@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_convert_base.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/05 16:19:30 by kyamaguc          #+#    #+#             */
+/*   Updated: 2023/02/05 16:25:08 by kyamaguc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-size_t ft_convert_base(unsigned long long num, unsigned long long base, char format)
+size_t	ft_convert_base(unsigned long long num, size_t base, char format)
 {
 	size_t	len;
 
